@@ -26,7 +26,12 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
+% Count the number of point which belongs to i-th centroid
+count = zeros(1, K);
 
+for j = 1:K
+	count(j) = sum(ismember(idx,j));
+end
 
 
 % =============================================================
