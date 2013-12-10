@@ -26,6 +26,14 @@ idx = zeros(size(X,1), 1);
 
 
 
+for i = 1:size(X,1)
+	
+	% Initialise tempNorm as 2-norm value of difference between i-th point and 1st centroid
+	tempNorm = norm(X(i,:) - centroids(1,:));
+
+	% Set 1st centroid is the closest centroid to i-th point
+    idx(i) = 1;
+end
 
 % =============================================================
 
