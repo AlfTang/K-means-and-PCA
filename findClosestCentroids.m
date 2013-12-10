@@ -21,11 +21,6 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
-
-
-
-
 for i = 1:size(X,1)
 	
 	% Initialise tempNorm as 2-norm value of difference between i-th point and 1st centroid
