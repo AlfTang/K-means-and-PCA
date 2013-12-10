@@ -33,6 +33,14 @@ for i = 1:size(X,1)
 
 	% Set 1st centroid is the closest centroid to i-th point
     idx(i) = 1;
+    
+    % If other centroids are closer to i-th point, set the index of that centroid to idx(i)
+    for j = 2:K
+        if(tempNorm > norm(X(i,:) - centroids(j,:)))
+            tempNorm = norm(X(i,:) - centroids(j,:));
+            idx(i) = j;
+        end
+    end
 end
 
 % =============================================================
